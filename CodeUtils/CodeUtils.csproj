@@ -18,6 +18,9 @@
     <Description>Biblioteca de Funções e Extensões Úteis (Validação de CNPJ, CPF, Formatações, etc.)</Description>
     <Owners>Quiese de Freitas Silveira</Owners>
     <PackageProjectUrl>https://github.com/Quiese/CodeUtils</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/Quiese/CodeUtils</PackageLicenseUrl>
+    <Summary>Biblioteca de Funções e Extensões Úteis (Validação de CNPJ, CPF, Formatações, etc.)</Summary>
+    <PackageTags>CNPJ, CPF</PackageTags>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
