@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle( "CodeUtils" )]
-[assembly: AssemblyDescription( "" )]
+[assembly: AssemblyDescription("Biblioteca de Funções e Extensões Úteis (Validação de CNPJ, CPF, Formatações, etc.)")]
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "SOLUSIS Tecnologia em Software" )]
-[assembly: AssemblyProduct( "" )]
-[assembly: AssemblyCopyright( "" )]
+[assembly: AssemblyProduct("CodeUtils")]
+[assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 

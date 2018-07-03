@@ -65,8 +65,8 @@ namespace CodeUtils
 
         public static decimal Truncate(this decimal value, int decimals)
         {
-            var step = (decimal) Math.Pow(10, decimals);
-            var tmp = (int) Math.Truncate(step * value);
+            var step = (decimal)Math.Pow(10, decimals);
+            var tmp = (int)Math.Truncate(step * value);
 
             return tmp / step;
         }
@@ -74,7 +74,7 @@ namespace CodeUtils
         public static double Truncate(this double value, int decimals)
         {
             var step = Math.Pow(10, decimals);
-            var tmp = (int) Math.Truncate(step * value);
+            var tmp = (int)Math.Truncate(step * value);
             return tmp / step;
         }
 
