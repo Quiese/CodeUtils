@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CodeUtils
 {
@@ -25,8 +26,9 @@ namespace CodeUtils
             var store = new X509Store("MY", StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
             var collection1 = store.Certificates
+                .Find(X509FindType.FindByTimeValid, DateTime.Now, false)
                 .Find(X509FindType.FindByKeyUsage, X509KeyUsageFlags.DigitalSignature, true)
-                .Find(X509FindType.FindBySerialNumber, serialNumber, true);
+                .Find(X509FindType.FindBySerialNumber, serialNumber, false);
 
             return (collection1.Count == 0 || collection1.Count == 0) ? null : collection1[0];
         }
@@ -37,8 +39,9 @@ namespace CodeUtils
             var store = new X509Store("MY", StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
             var collection1 = store.Certificates
+                .Find(X509FindType.FindByTimeValid, DateTime.Now, false)
                 .Find(X509FindType.FindByKeyUsage, X509KeyUsageFlags.DigitalSignature, true)
-                .Find(X509FindType.FindBySubjectName, subjectName, true);
+                .Find(X509FindType.FindBySubjectName, subjectName, false);
 
             return (collection1.Count == 0 || collection1.Count == 0) ? null : collection1[0];
         }
