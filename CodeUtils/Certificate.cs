@@ -25,7 +25,7 @@ namespace CodeUtils
             var store = new X509Store("MY", StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
             var collection1 = store.Certificates
-                .Find(X509FindType.FindByTimeValid, X509KeyUsageFlags.DigitalSignature, true)
+                .Find(X509FindType.FindByKeyUsage, X509KeyUsageFlags.DigitalSignature, true)
                 .Find(X509FindType.FindBySerialNumber, serialNumber, true);
 
             return (collection1.Count == 0 || collection1.Count == 0) ? null : collection1[0];
@@ -37,7 +37,7 @@ namespace CodeUtils
             var store = new X509Store("MY", StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
             var collection1 = store.Certificates
-                .Find(X509FindType.FindByTimeValid, X509KeyUsageFlags.DigitalSignature, true)
+                .Find(X509FindType.FindByKeyUsage, X509KeyUsageFlags.DigitalSignature, true)
                 .Find(X509FindType.FindBySubjectName, subjectName, true);
 
             return (collection1.Count == 0 || collection1.Count == 0) ? null : collection1[0];
